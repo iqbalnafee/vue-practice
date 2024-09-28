@@ -6,6 +6,8 @@
   <ul>
     <li v-for="task in tasks" :key="task">{{ task }}</li>
   </ul>
+  <a v-bind:href="link">Click for Google</a> <!-- add any vue data to attribute use bind -->
+  <a :href="link">Click for Google</a> <!-- shorter way to use v bind -->
 </template>
 
 <script>
