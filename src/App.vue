@@ -8,6 +8,8 @@
   </ul>
   <a v-bind:href="link">Click for Google</a> <!-- add any vue data to attribute use bind -->
   <a :href="link">Click for Google</a> <!-- shorter way to use v bind -->
+  <button v-on:click="toggleStatus">Change Status</button>
+  <button @click="toggleStatus">Change Status</button> <!-- shorter way to use v on -->
 </template>
 
 <script>
@@ -23,6 +25,12 @@ export default{
       ],
       link: "https://google.com",
     };
+  },
+  methods:{
+    toggleStatus(){
+      if(this.status === 'active') this.status = 'inactive';
+      else this.status = 'active';
+    }
   }
 }
 </script>
